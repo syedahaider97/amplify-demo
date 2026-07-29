@@ -1,0 +1,27 @@
+# AWS Amplify build specification.
+#
+# Amplify reads this file from the repo root on every build it is triggered to
+# run (i.e. on every push to a connected branch). It defines HOW to turn your
+# source into deployable static artifacts. Amplify handles the "when" (webhook
+# from GitHub) and the "where" (its managed CDN + HTTPS) for you.
+#
+# Docs: https://docs.aws.amazon.com/amplify/latest/userguide/build-settings.html
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        # `npm ci` installs exactly what's in package-lock.json — reproducible.
+        - npm ci
+    build:
+      commands:
+        - npm run build
+  artifacts:
+    # Vite outputs the production build to ./dist
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    # Cache node_modules between builds to speed up subsequent deploys.
+    paths:
+      - node_modules/**/*
