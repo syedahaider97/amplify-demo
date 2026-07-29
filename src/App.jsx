@@ -25,7 +25,7 @@ export default function App() {
 
       <ul className="pipeline">
         <li>1. Commit &amp; push to GitHub</li>
-        <li>2. GitHub Actions runs lint + tests + build</li>
+        <li>2. GitHub Actions runs Lint + Tests + Build</li>
         <li>3. Amplify builds from <code>amplify.yml</code></li>
         <li>4. Deployed to HTTPS + CDN in ~2 min</li>
       </ul>
