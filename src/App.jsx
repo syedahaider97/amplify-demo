@@ -13,7 +13,7 @@ export default function App() {
   return (
     <main className="app">
       <div className="badge">CI/CD Demo</div>
-      <h1>GitHub → AWS Amplify</h1>
+      <h1>Ummah Professionals</h1>
       <p className="subtitle">
         Push to <code>main</code>, and this site rebuilds and redeploys
         automatically to a global CDN.
