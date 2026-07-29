@@ -4,7 +4,8 @@ import './App.css'
 // A deliberately tiny app: enough to have a real build + a real test,
 // small enough to explain on a slide.
 export function formatCount(n) {
-  return n === 1 ? '1 deploy' : `${n} deploys`
+  // return n === 1 ? '1 deploy' : `${n} deploys`
+  return `${n} deploys`
 }
 
 export default function App() {
